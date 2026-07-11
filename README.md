@@ -210,6 +210,3 @@ az disk list --resource-group rg1 --output table
 | Bash (CLI) | `az deployment group create --resource-group rg1 --template-file azuredeploydisk.bicep` | Deploy Bicep template |
 | Bash (CLI) | `az disk list --resource-group rg1 --output table` | List disks in rg1 |
 
----
-
-*Sean Keener · Azure Infrastructure Lab Series · [github.com/seankeener](https://github.com/seankeener)*
