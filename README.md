@@ -30,6 +30,9 @@ This SOP documents the end-to-end process for creating and deploying Azure manag
 
 This step creates the source disk manually and exports the ARM and Bicep templates that will be used for all subsequent deployments.
 
+<img width="2502" height="1188" alt="image" src="https://github.com/user-attachments/assets/d5df672d-72c6-42c2-bc11-d03243ea46e3" />
+
+
 - Navigate to the Azure Portal and search for **Disks** in the search bar
 - Click **Create a disk**
 - Select resource group `rg1` and name the disk `AZ-104 Disk 1`
@@ -46,6 +49,9 @@ This step creates the source disk manually and exports the ARM and Bicep templat
 
 Deploy a second disk using the exported ARM template through the Azure Portal's custom deployment editor.
 
+<img width="2501" height="1148" alt="image" src="https://github.com/user-attachments/assets/1bfbe511-3815-43ac-8cf4-73d5da804674" />
+
+
 - In the Azure Portal, search for **Deploy a custom template**
 - Click **Build your own template in the editor**
 - Load the ARM template JSON file downloaded in Step 1
@@ -59,6 +65,9 @@ Deploy a second disk using the exported ARM template through the Azure Portal's 
 ## Step 3 — Create a Storage Account for Template Files
 
 A storage account is required to host the ARM and Bicep files for CLI-based deployments in PowerShell and Bash.
+
+<img width="1793" height="370" alt="image" src="https://github.com/user-attachments/assets/ef987fd3-a4dd-4239-9e92-b815b7ce0e8e" />
+
 
 - Open Azure Cloud Shell and select **PowerShell** mode
 - Run the following command to create a storage account:
@@ -77,6 +86,9 @@ New-AzStorageAccount -ResourceGroupName rg1 -Name test12345 -Location EastUS -Sk
 ## Step 4 — Deploy Disk 3 via PowerShell (ARM Template)
 
 Use PowerShell and the ARM template to deploy a third disk into `rg1`.
+
+<img width="2515" height="769" alt="image" src="https://github.com/user-attachments/assets/82295527-ddb3-4509-aa28-426512fddac4" />
+
 
 - In Azure Cloud Shell (PowerShell mode), open the editor
 - Select the uploaded ARM template file
@@ -101,6 +113,10 @@ Get-AzDisk
 
 Switch to Bash in Azure Cloud Shell and use the Bicep template to deploy a fourth disk.
 
+<img width="2518" height="813" alt="image" src="https://github.com/user-attachments/assets/62211ba4-e2b1-479e-9235-a39b36df002f" /> 
+<img width="2515" height="386" alt="image" src="https://github.com/user-attachments/assets/f8b02d34-f250-4717-92b9-535122f9f009" />
+
+
 - Switch Azure Cloud Shell to **Bash** mode
 - Run `ls` to confirm both the ARM JSON and Bicep files are present
 - Open the editor and select the Bicep file
@@ -119,6 +135,10 @@ az deployment group create --resource-group rg1 --template-file azuredeploydisk.
 ## Step 6 — Deploy Disk 5 via Bash (Modified Bicep Template)
 
 Modify the Bicep template with custom parameters — a different disk name, size, and SKU — then deploy a fifth disk.
+
+<img width="2528" height="779" alt="image" src="https://github.com/user-attachments/assets/c7858723-7394-485a-939a-3f7d63cdff3d" />
+<img width="2537" height="772" alt="image" src="https://github.com/user-attachments/assets/bf4820dc-bfb5-447c-a4a5-dab6709ade20" />
+
 
 - Upload the modified Bicep file from the [Microsoft Learning AZ-104 GitHub repository](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Allfiles/Labs/03/azuredeploydisk.bicep)
 - Open the Bicep file in the Cloud Shell editor
@@ -139,6 +159,9 @@ az deployment group create --resource-group rg1 --template-file azuredeploydisk.
 ## Step 7 — Final Verification
 
 Confirm all five disks were successfully deployed into `rg1`.
+
+<img width="2514" height="353" alt="image" src="https://github.com/user-attachments/assets/c33dd462-0939-4cad-91b8-3bc2c82cc6b5" />
+
 
 - In PowerShell, run the following to list all disks:
 
