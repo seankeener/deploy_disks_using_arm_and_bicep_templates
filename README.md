@@ -1,4 +1,3 @@
-
 # Standard Operating Procedure
 ## Creating and Deploying Azure Disks Using ARM and Bicep Templates
 
