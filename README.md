@@ -1,4 +1,4 @@
-[ARM_Bicep_Disk_Lab_SOP.md](https://github.com/user-attachments/files/29931455/ARM_Bicep_Disk_Lab_SOP.md)
+
 # Standard Operating Procedure
 ## Creating and Deploying Azure Disks Using ARM and Bicep Templates
 
