@@ -1,4 +1,8 @@
 # Standard Operating Procedure
+
+# Watch me do it here
+https://www.loom.com/share/9610db5ae38d4ff4bdc3d8f2c4ed441c
+
 ## Creating and Deploying Azure Disks Using ARM and Bicep Templates
 
 | Field | Details |
